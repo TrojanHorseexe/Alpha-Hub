@@ -1,12 +1,5 @@
 -- Made by Trojan.exe
-
-local Dahoodcheats = Instance.new("ScreenGui")
-local LoginFrame = Instance.new("Frame")
-local Title = Instance.new("TextLabel")
-local Enter = Instance.new("TextButton")
-local Key = Instance.new("TextBox")
-local Tag = Instance.new("TextLabel")
-local reminder = Instance.new("TextLabel")
+local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local Trojan = Instance.new("TextLabel")
 local Fly = Instance.new("TextButton")
@@ -26,95 +19,14 @@ local SIDE = Instance.new("TextButton")
 
 --Properties:
 
-Dahoodcheats.Name = "Da hood cheats"
-Dahoodcheats.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
-Dahoodcheats.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
-LoginFrame.Name = "LoginFrame"
-LoginFrame.Parent = Dahoodcheats
-LoginFrame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-LoginFrame.BorderColor3 = Color3.fromRGB(255, 0, 0)
-LoginFrame.BorderSizePixel = 3
-LoginFrame.Position = UDim2.new(0.409798473, 0, 0.112888798, 0)
-LoginFrame.Size = UDim2.new(0, 315, 0, 429)
-LoginFrame.Active = true
-LoginFrame.Draggable = true
-
-Title.Name = "Title"
-Title.Parent = LoginFrame
-Title.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Title.BorderColor3 = Color3.fromRGB(255, 0, 0)
-Title.BorderSizePixel = 3
-Title.Size = UDim2.new(0, 315, 0, 50)
-Title.Font = Enum.Font.Cartoon
-Title.Text = "System Check"
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-Title.TextSize = 35.000
-
-Enter.Name = "Enter"
-Enter.Parent = LoginFrame
-Enter.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
-Enter.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Enter.Position = UDim2.new(0.130158737, 0, 0.561771631, 0)
-Enter.Size = UDim2.new(0, 232, 0, 74)
-Enter.Font = Enum.Font.Cartoon
-Enter.Text = "Enter"
-Enter.TextColor3 = Color3.fromRGB(255, 255, 255)
-Enter.TextSize = 38.000
-Enter.MouseButton1Down:Connect(function()
-	if Key.Text == "TrojanHorse" then
-		reminder.Text = "Right key!"
-		Frame:Destroy()
-		loadstring(game:HttpGet('https://pastebin.com/raw/bfFpEmcv'))()
-	else
-		local kickhanlder = game.Players.LocalPlayer
-		kickhanlder:Kick('Wrong key please join https://discord.gg/82gvrCE5Ms')
-		warn('Imagine not looking up the right key L')
-	end
-end)
-
-Key.Name = "Key"
-Key.Parent = LoginFrame
-Key.BackgroundColor3 = Color3.fromRGB(16, 16, 16)
-Key.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Key.Position = UDim2.new(0.0857142881, 0, 0.265734255, 0)
-Key.Size = UDim2.new(0, 259, 0, 83)
-Key.Font = Enum.Font.Cartoon
-Key.Text = "Key here"
-Key.TextColor3 = Color3.fromRGB(255, 255, 255)
-Key.TextSize = 31.000
-
-Tag.Name = "Tag"
-Tag.Parent = LoginFrame
-Tag.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-Tag.BorderColor3 = Color3.fromRGB(0, 0, 0)
-Tag.Position = UDim2.new(0.438095242, 0, 0.890442908, 0)
-Tag.Size = UDim2.new(0, 171, 0, 40)
-Tag.Font = Enum.Font.Cartoon
-Tag.Text = "Made by @Trojan.exe"
-Tag.TextColor3 = Color3.fromRGB(255, 255, 255)
-Tag.TextSize = 14.000
-
-reminder.Name = "reminder"
-reminder.Parent = LoginFrame
-reminder.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
-reminder.BorderColor3 = Color3.fromRGB(0, 0, 0)
-reminder.Position = UDim2.new(0.180952385, 0, 0.77389276, 0)
-reminder.Size = UDim2.new(0, 200, 0, 50)
-reminder.Visible = false
-reminder.Font = Enum.Font.Cartoon
-reminder.Text = "Wrong Key!"
-reminder.TextColor3 = Color3.fromRGB(255, 0, 0)
-reminder.TextSize = 60.000
-
-Frame.Parent = Dahoodcheats
+Frame.Parent = ScreenGui
 Frame.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
 Frame.BorderColor3 = Color3.fromRGB(255, 0, 0)
 Frame.Position = UDim2.new(0.667098165, 0, 0.12874338, 0)
 Frame.Size = UDim2.new(0, 391, 0, 188)
-Frame.Visible = false
-Frame.Active = true
-Frame.Draggable = true
 
 Trojan.Name = "Trojan"
 Trojan.Parent = Frame
@@ -122,8 +34,8 @@ Trojan.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Trojan.BorderColor3 = Color3.fromRGB(255, 0, 0)
 Trojan.Position = UDim2.new(0, 0, -0.254118443, 0)
 Trojan.Size = UDim2.new(0, 391, 0, 47)
-Trojan.Font = Enum.Font.Cartoon
-Trojan.Text = "Alpha"
+Trojan.Font = Enum.Font.Antique
+Trojan.Text = "Trojan"
 Trojan.TextColor3 = Color3.fromRGB(255, 255, 255)
 Trojan.TextSize = 31.000
 
@@ -140,7 +52,6 @@ Fly.TextSize = 30.000
 Fly.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://raw.githubusercontent.com/22kristina/swag/main/admin_fly"))()
 end)
-
 
 SilentAim.Name = "SilentAim"
 SilentAim.Parent = Frame
@@ -2728,7 +2639,6 @@ SilentAim.MouseButton1Down:connect(function()
 	end)
 end)
 
-
 God.Name = "God"
 God.Parent = Frame
 God.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
@@ -2762,7 +2672,6 @@ God.MouseButton1Down:connect(function()
 	local armValue = Instance.new('IntValue', game:GetService('Players').LocalPlayer.Character:FindFirstChild('BodyEffects'));
 	armValue.Name = 'Armor';
 end)
-
 
 ChatSpy.Name = "ChatSpy"
 ChatSpy.Parent = Frame
@@ -2839,8 +2748,8 @@ ChatSpy.MouseButton1Down:connect(function()
 	local chatFrame = player.PlayerGui.Chat.Frame
 	chatFrame.ChatChannelParentFrame.Visible = true
 	chatFrame.ChatBarParentFrame.Position = chatFrame.ChatChannelParentFrame.Position+UDim2.new(UDim.new(),chatFrame.ChatChannelParentFrame.Size.Y)
+	--Credit to O Plays on Youtube, go subscribe to him (not my account, just advertising for him, we don't even know eachother lol)
 end)
-
 
 NoClip.Name = "NoClip"
 NoClip.Parent = Frame
@@ -2856,6 +2765,7 @@ NoClip.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://pastebin.com/raw/p02c4jNc"))()
 end)
 
+
 InfJump.Name = "InfJump"
 InfJump.Parent = Frame
 InfJump.BackgroundColor3 = Color3.fromRGB(38, 38, 38)
@@ -2869,7 +2779,6 @@ InfJump.TextSize = 30.000
 InfJump.MouseButton1Down:connect(function()
 	loadstring(game:HttpGet("https://pastebin.com/raw/p02c4jNc"))()
 end)
-
 
 Esp.Name = "Esp"
 Esp.Parent = Frame
@@ -2890,7 +2799,7 @@ NPC.Parent = Frame
 NPC.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 NPC.BackgroundTransparency = 1.000
 NPC.BorderColor3 = Color3.fromRGB(38, 38, 38)
-NPC.Position = UDim2.new(0.311231017, 0, 0.382978708, 0)
+NPC.Position = UDim2.new(0.308673471, 0, 0.398936152, 0)
 NPC.Size = UDim2.new(0, 147, 0, 100)
 NPC.Font = Enum.Font.SourceSans
 NPC.Text = "NPC"
@@ -2963,7 +2872,7 @@ SIDE.TextSize = 10.000
 
 -- Scripts:
 
-local function MTRSCDI_fake_script() -- Frame.Hide/Show gui 
+local function SXHGK_fake_script() -- Frame.Hide/Show gui 
 	local script = Instance.new('LocalScript', Frame)
 
 	local Main = script.Parent
@@ -2976,4 +2885,46 @@ local function MTRSCDI_fake_script() -- Frame.Hide/Show gui
 		end
 	end)
 end
-coroutine.wrap(MTRSCDI_fake_script)()
+coroutine.wrap(SXHGK_fake_script)()
+local function ZCSUKR_fake_script() -- ScreenGui.Notifications 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	wait(7)
+	
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "IMPORTANT!!!";
+		Text = "PRESS F TO SHOW THE GUI AND R TO HIDE IT";
+		Icon = "http://www.roblox.com/asset/?id=6904117559";
+		Duration = "10";
+		Button1 = "GO AWAY";
+	})
+end
+coroutine.wrap(ZCSUKR_fake_script)()
+local function FQYKC_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	wait(10)
+	
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "IMPORTANT!!!";
+		Text = "ITS NOT MY FAULT IF YOU GET BANNED YOU SCRIPT KIDDE";
+		Icon = "http://www.roblox.com/asset/?id=6904117559";
+		Duration = "10";
+		Button1 = "BET";
+	})
+end
+coroutine.wrap(FQYKC_fake_script)()
+local function DDHJMDO_fake_script() -- ScreenGui.LocalScript 
+	local script = Instance.new('LocalScript', ScreenGui)
+
+	wait(16)
+	
+	game.StarterGui:SetCore("SendNotification", {
+		Title = "IMPORTANT!!!";
+		Text = "SOME MAY HAVE BEEN PATCHED I WILL UPDATE WHEN IM FREE";
+		Icon = "http://www.roblox.com/asset/?id=6904117559";
+		Duration = "10";
+		Button1 = "B)";
+	})
+end
+coroutine.wrap(DDHJMDO_fake_script)()
